@@ -2,6 +2,7 @@
 An object detection script using yolov5 model. If any spesificed object gets into the spesificed area, an alarm triggers and script takes photos of the target.
 
 YouTube Video:
+
 [![Youtube Video](https://img.youtube.com/vi/AaqFqx3wzfE/0.jpg)](https://www.youtube.com/watch?v=AaqFqx3wzfE)
 
 
