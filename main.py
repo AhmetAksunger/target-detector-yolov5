@@ -46,10 +46,22 @@ def inside_polygon(point,polygon):
 cv2.namedWindow('Video')
 cv2.setMouseCallback('Video', draw_polygon)
 
+def preprocess(img):
+
+    height, width = img.shape[:2]
+
+    ratio = height / width
+
+    img = cv2.resize(img, (640, int(640 * ratio)))
+
+    return img
+
 while True:
     ret, frame = cap.read()
     frame_detected = frame.copy()
 
+    frame = preprocess(frame)
+    
     results = model(frame)
 
     # using panda to get the detected objects' data
